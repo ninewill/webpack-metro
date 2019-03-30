@@ -108,7 +108,7 @@ module.exports = {
 		extractCSS,
 		new CopyWebpackPlugin([
 			{ from: 'assets', to: 'assets'},
-			{ from: 'images', to: 'images'}
+			// { from: 'images', to: 'images'}
 		]),
 		new webpack.ProvidePlugin({
 			$: 'jquery',
