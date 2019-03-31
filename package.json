@@ -1,5 +1,5 @@
 {
-  "name": "metro-ppt-web",
+  "name": "hello-webpack",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,7 +7,7 @@
     "watch": "NODE_ENV=development webpack --mode development --watch",
     "start": "NODE_ENV=development webpack --mode development",
     "deploy": "NODE_ENV=production webpack --mode production",
-    "dev": "NODE_ENV=development webpack-dev-server --mode development --open"
+    "dev": "NODE_ENV=production  webpack-dev-server --mode development --open --host 192.168.168.18"
   },
   "author": "",
   "license": "ISC",
@@ -27,16 +27,16 @@
     "image-webpack-loader": "^4.6.0",
     "node-sass": "^4.11.0",
     "postcss-loader": "^3.0.0",
+    "pug-html-loader": "^1.1.5",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "url-loader": "^1.1.2",
     "webpack": "^4.29.6",
-    "webpack-cli": "^3.3.0",
+    "webpack-cli": "^3.2.3",
     "webpack-dev-server": "^3.2.1"
   },
   "dependencies": {
     "@babel/polyfill": "^7.4.0",
-    "jquery": "^3.3.1",
-    "wow": "0.0.6"
+    "jquery": "^3.3.1"
   }
 }

@@ -1,15 +1,16 @@
 var path = require("path");
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var extractCSS = new ExtractTextPlugin('css/[name].css');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
+
 module.exports = {
 	context: path.resolve(__dirname, "./src"),
 	entry: {
 		index: 'index',
-		about: 'about',
+		about: 'about'
 	},
 	output: {
 		path: path.resolve(__dirname, "./dist"),
@@ -27,6 +28,19 @@ module.exports = {
 		],
 		extensions: ['.js']
 	},
+	optimization: {
+		splitChunks: {
+			cacheGroups: {
+				vendor: {
+					test: /node_modules/,
+					name: 'vendor',
+					chunks: 'initial',
+					enforce: true
+				}
+			}
+		}
+	},
+
 	devServer: {
 		compress: true,
 		port: 3000,
@@ -48,15 +62,25 @@ module.exports = {
 	module: {
 		rules: [
 			{
+				test: /\.(pug)$/,
+				use: ['html-loader', 'pug-html-loader'],
+				include: path.resolve('src/pug'),
+				exclude: path.resolve('./node_modules'),
+			},
+			{
 				test: /\.(woff|woff2|ttf|eot)$/,
 				loader: 'file-loader',
 				options: {
 					name: '[path][name].[ext]?[hash:8]'
-				}
+				},
+				include: path.resolve('src/assets'),
+				exclude: path.resolve('./node_modules'),
 			},
 			{
 				test: /\.css$/,
-				use: extractCSS.extract(['css-loader', 'postcss-loader'])
+				use: extractCSS.extract(['css-loader', 'postcss-loader']),
+				include: path.resolve('src/css'),
+				exclude: path.resolve('./node_modules'),
 			},
 			{
 				test: /\.(sass|scss)$/,
@@ -65,14 +89,19 @@ module.exports = {
 					'css-loader',
 					'postcss-loader',
 					'sass-loader'
-				]
+				],
+				include: path.resolve('src/scss'),
+				exclude: path.resolve('./node_modules'),
 			},
 			{
 				test: /\.(js)$/,
-				use: 'babel-loader'
+				use: 'babel-loader',
+				include: path.resolve('.'),
 			},
 			{
-				test: /\.(jpe?g|png|gif|svg)$/,
+				test: /\.(jpe?g|png|gif|svg|mp4)$/,
+				include: path.resolve('src/images'),
+				exclude: path.resolve('./node_modules'),
 				use: [
 					{
 						loader: 'url-loader',
@@ -97,7 +126,7 @@ module.exports = {
 							},
 							gifsicle: {
 								interlaced: false,
-							},
+							}
 						}
 					}
 				]
@@ -107,8 +136,8 @@ module.exports = {
 	plugins: [
 		extractCSS,
 		new CopyWebpackPlugin([
-			{ from: 'assets', to: 'assets'},
-			// { from: 'images', to: 'images'}
+			{ from: 'assets', to: 'assets' },
+			{ from: 'images', to: 'images' }
 		]),
 		new webpack.ProvidePlugin({
 			$: 'jquery',
@@ -120,14 +149,22 @@ module.exports = {
 			filename: 'index.html',
 			template: 'html/index.html',
 			viewport: 'width=device-width, initial-scale=1.0',
-			chunks: ['index'],
+			chunks: ['vendor', 'index'],
+			minify: {
+				collapseWhitespace: true,
+				removeComments: true,
+				removeRedundantAttributes: true,
+				removeScriptTypeAttributes: true,
+				removeStyleLinkTypeAttributes: true,
+				useShortDoctype: true
+			}
 		}),
 		new HtmlWebpackPlugin({
 			title: 'about',
 			filename: 'about.html',
-			template: 'html/about.html',
+			template: 'pug/about.pug',
 			viewport: 'width=device-width, initial-scale=1.0',
-			chunks: ['about'],
+			chunks: ['vendor', 'about'],
 		}),
 	]
 }
