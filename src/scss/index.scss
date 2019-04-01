@@ -8,9 +8,18 @@ $txt-white: #fff;
 $txt-black: #000;
 $txt-blue: #3b91bf;
 $txt-deep-blue: #3b91c0;
+$txt-brown: #956229;
 $txt-gray: rgba(0, 0, 0, 0.6);
+$dashed-color: #979797;
+$sec3-bg-color:#f6f6f6;
+$sec3-txt-color:#eea100;
+$sec4-txt-color: #e1a300;
+$sec5-btn-color:#7ab51d;
 $footer-color:#272727;
 $footer-time-color:#dad6d6;
+
+
+
 
 
 html,body{
@@ -253,6 +262,588 @@ html,body{
                     line-height: 18px;
                     letter-spacing: 1.2px;
                     color: $txt-gray;
+                    text-transform: uppercase;
+                }
+            }
+            .section-2-info-description2{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                margin-top: 51px;
+                .mrt-line{
+                    width: 55%;
+                    height: auto;
+                    .mrt-number{
+                        width: 100%;
+                        display: flex;
+                        .mrt-blue-line-number{
+                            width: 50%;
+                            height: auto;
+                            display: flex;
+                            position: relative;
+                            .blue-number,.blue-number-pr{
+                                font-size: 70px;
+                                line-height: 48px;
+                                font-weight: 500;
+                                color: $txt-deep-blue;
+                            }
+                            .blue-number-txt{
+                                position: absolute;
+                                bottom: 0;
+                                left: 60%;
+                                font-size: 14px;
+                                line-height: 18px;
+                                letter-spacing: 1.4px;
+                                opacity: 0.9;
+                            }
+                        }
+                        .mrt-brown-line-number{
+                            width: 50%;
+                            height: auto;
+                            display: flex;
+                            position: relative;
+                            .brown-number,.brown-number-pr{
+                                font-size: 70px;
+                                line-height: 48px;
+                                font-weight: 500;
+                                color: $txt-brown;
+                            }
+                            .brown-number-txt{
+                                position: absolute;
+                                bottom: 0;
+                                left: 60%;
+                                font-size: 14px;
+                                line-height: 18px;
+                                letter-spacing: 1.4px;
+                                opacity: 0.9;
+                            }
+                        }
+                    }
+                    .mrt-txt{
+                        margin-top: 59px;
+                        .circle-icon{
+                            width: 25px;
+                            height: 25px;
+                            border-radius: 50%;
+                            margin-right: 15px;
+                        }
+                        .mrt-blue-txt{
+                            display: flex;
+                            .circle-blue{
+                                border: 5px solid $txt-deep-blue;
+                            }
+                        }
+                        .mrt-brown-txt{
+                            display: flex;
+                            margin-top: 20px;
+                            .circle-brown{
+                                border: 5px solid $txt-brown;
+                            }
+                        }
+                        .mrt-txt-description{
+                            line-height: 22px;
+                            font-size: 16px;
+                        }
+                    }
+                }
+                .mrt-progress-bar{
+                    width: 45%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    .mrt-progress-bar-line{
+                        width: 100%;
+                        height: auto;
+                        display: flex;
+                        justify-content: center;
+                        position: relative;
+                        &::after{
+                            content: '';
+                            position: absolute;
+                            width: 100%;
+                            border: 1px dashed $dashed-color;
+                            left: 0;
+                            bottom: -58%;
+                            z-index: -1;
+                        }
+                        .mrt-progress-bar-container{
+                            width: 100%;
+                            height: 100%;
+                            transform : rotate(-90deg);
+                            margin-top: 10%;
+                            position: relative;
+                            .circle-img{
+                                position: absolute;
+                                border-radius: 50px 50px 0 0;
+                                width: 30px;
+                                height: 15px;
+                                background-color: $txt-white;
+                                left: -7px;
+                                bottom: 20px;
+                                transform : rotate(90deg);
+                                z-index: 10;
+                                &::after{
+                                    content: '';
+                                    position: absolute;
+                                    top: 7px;
+                                    left: 7px;
+                                    width: 13px;
+                                    height: 13px;
+                                    background-color: $txt-white;
+                                    border: 2px solid $txt-deep-blue;
+                                    border-radius: 50%;
+                                    z-index: 11;
+                                }
+                            }
+                            #mrtblueline2016,#mrtblueline2016sc{
+                                width: 156px;
+                                position: relative;
+                                margin-bottom: 20px;
+                            }
+                            #mrtbrownline2016,#mrtbrownline2016sc{
+                                width: 122px;
+                                position: relative;
+                            }
+                            #mrtblueline2017,#mrtblueline2017sc{
+                                width: 156px;
+                                position: relative;
+                                margin-bottom: 20px;
+                            }
+                            #mrtbrownline2017,#mrtbrownline2017sc{
+                                width: 102px;
+                                position: relative;
+                            }
+                            #mrtblueline20172,#mrtblueline20172sc{
+                                width: 156px;
+                                position: relative;
+                                margin-bottom: 20px;
+                            }
+                            #mrtbrownline20172,#mrtbrownline20172sc{
+                                width: 102px;
+                                position: relative;
+                            }
+                        }
+                    }
+                    .mrt-year{
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: flex-end;
+                        margin-top: 15%;
+                    }
+                }
+            }
+        }
+        .financial-figures{
+            margin-top: 63px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h2{
+                font-size: 24px;
+                line-height: 34px;
+                font-weight: 600;
+            }
+            .bottom-arrow{
+                background-image: url('~bottom-arrow.svg');
+                width: 20px;
+                height: 20px;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+        }
+        .section-3-info{
+            width: 100%;
+            height: 100%;
+            background-color: $sec3-bg-color;
+            display: flex;
+            .section-3-title{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                position: relative;
+                &::after{
+                    content: '';
+                    position: absolute;
+                    align-self: center;
+                    width: 2px;
+                    height: 567px;
+                    background-color: $txt-white;
+                }
+                .section-3-info-description{
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 25px;
+                    h3{
+                        font-family: Montserrat;
+                        text-align: center;
+                        font-size: 16px;
+                        line-height: 26px;
+                        span{
+                            color: $sec3-txt-color;
+                            display: block;
+                        }
+                    }
+                    .section-3-average-progress{
+                        display: flex;
+                        flex-direction: column;
+                        h4{
+                            font-size: 12px;
+                            line-height: 18px;
+                            margin: 26px 0 75px 110px;
+                            letter-spacing: 1.2px;
+                        }
+                        .money-progress-bar{
+                            display: flex;
+                            position: relative;
+                            margin: 82px 0 0 123px;
+                            .section-3-progress-number-info{
+                                position: absolute;
+                                margin-left: 35%;
+                                margin-top: 5%;
+                                .money-number,.money-number2{
+                                    font-size: 70px;
+                                    line-height: 48px;
+                                    font-weight: 500;
+                                    color: $sec3-txt-color;
+                                }
+                            }
+                            .sc3-progress-number{
+                                margin-left: 35%;
+                            }
+                            .section-3-number-txt{
+                                position: absolute;
+                                bottom: 30px;
+                                margin-left: 35%;
+                                font-size: 14px;
+                                line-height: 20px;
+                                letter-spacing: 1.4px;
+                                text-transform: uppercase;
+                            }
+                        }
+                        .money-year-progress-bar{
+                            margin: 44px 0 0 110px;
+                            display: flex;
+                            ul{
+                                margin-right: 10px;
+                                li{
+                                    margin-top: 43px;
+                                }
+                                .money-year-2016{
+                                    margin-top: 0;
+                                }
+                            }
+                            .million-progress-bar{
+                                #sec3Container2016{
+                                    width: 371px;
+                                    position: relative;
+                                }
+                                #sec3Container2017{
+                                    width: 412px;
+                                    position: relative;
+                                    margin-top: 43px;
+                                }
+                                #sec3Container2018{
+                                    width: 424px;
+                                    position: relative;
+                                    margin-top: 43px;
+                                }
+                                #sec3Container2016s2{
+                                    width: 178px;
+                                    position: relative;
+                                }
+                                #sec3Container2017s2{
+                                    width: 359px;
+                                    position: relative;
+                                    margin-top: 43px;
+                                }
+                                #sec3Container2018s2{
+                                    width: 395px;
+                                    position: relative;
+                                    margin-top: 43px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .total-revenue{
+                    width: 50%;
+                    height: auto;
+                    
+                }
+                .profit-before-tax{
+                    width: 50%;
+                    height: auto;
+                }
+            }
+        }
+        .section-4-info{
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            .section-4-info-description{
+                width: 100%;
+                position: absolute;
+                z-index: 2;
+                margin-top: 27px;
+                h3{
+                    position: relative;
+                    font-weight: 600;
+                    font-size: 24px;
+                    line-height: 1.42;
+                    text-align: right;
+                    &::after{
+                        content: '';
+                        background-image: url("~arrow-icon-2.svg");
+                        position: absolute;
+                        top:15%;
+                        left: 81%;
+                        display: inline-block;
+                        width: 100%;
+                        height: 100%;
+                        background-repeat: no-repeat;
+                    }
+                }
+                .performance-progress-sc4{
+                    height: 100%;
+                    display: flex;
+                    margin: 38px 0 0 449px;
+                    .satisfaction{
+                        width: 46%;
+                        height: auto;
+                        h4{
+                            font-size: 16px;
+                            line-height: 26px;
+                            span{
+                                color: $sec4-txt-color;
+                                display: inline-block;
+                            }
+                        }
+                        .satisfaction-wrap{
+                            display: flex;
+                            align-items: flex-end;
+                            margin-top: 92.5px;
+                            position: relative;
+                            .progress-number-info-sc4{
+                                position: absolute;
+                                right: 20%;
+                                font-size: 70px;
+                                line-height: 48px;
+                                color: $sec4-txt-color;
+                            }
+                            .number-txt-sc4{
+                                position: absolute;
+                                right: 15%;
+                                bottom: 0;
+                                font-size: 14px;
+                                line-height: 18px;
+                                letter-spacing: 1.4px;
+                            }
+                        }
+                        .performance-year-progress-bar{
+                            margin: 26px 0 0 -50px;
+                            display: flex;
+                            ul{
+                                margin-right: 10px;
+                                color: $txt-white;
+                                li{
+                                    margin-top: 43px;
+                                }
+                                .performance-year-2016{
+                                    margin-top: 0;
+                                }
+                            }
+                            .performance-progress-bar{
+                                #sec4Container2016{
+                                    width: 291px;
+                                    position: relative;
+                                }
+                                #sec4Container2017{
+                                    width: 263px;
+                                    position: relative;
+                                    margin-top: 43px;
+                                }
+                                #sec4Container2018{
+                                    width: 279px;
+                                    position: relative;
+                                    margin-top: 43px;
+                                }
+                            }
+                        }
+                    }
+                    .mkbf{
+                        width: 54%;
+                        height: auto;
+                        h4{
+                            font-size: 16px;
+                            line-height: 26px;
+                            span{
+                                color: $sec4-txt-color;
+                                display: inline-block;
+                            }
+                        }
+                        .satisfaction-wrap{
+                            display: flex;
+                            align-items: flex-end;
+                            margin-top: 73.5px;
+                            position: relative;
+                            .progress-number-info-sc4{
+                                position: absolute;
+                                right: 20%;
+                                font-size: 70px;
+                                line-height: 48px;
+                                color: $sec4-txt-color;
+                            }
+                            .number-txt-sc4{
+                                position: absolute;
+                                right: 0;
+                                bottom: 0;
+                                font-size: 14px;
+                                line-height: 18px;
+                                letter-spacing: 1.4px;
+                            }
+                        }
+                        .performance-year-progress-bar{
+                            margin: 26px 0 0 -50px;
+                            display: flex;
+                            ul{
+                                margin-right: 10px;
+                                color: $txt-black;
+                                li{
+                                    margin-top: 43px;
+                                }
+                                .performance-year-2016{
+                                    margin-top: 0;
+                                }
+                            }
+                            .performance-progress-bar{
+                                #sec4Container2016s2{
+                                    width: 280px;
+                                    position: relative;
+                                }
+                                #sec4Container2017s2{
+                                    width: 307px;
+                                    position: relative;
+                                    margin-top: 43px;
+                                }
+                                #sec4Container2018s2{
+                                    width: 294px;
+                                    position: relative;
+                                    margin-top: 43px;
+                                }
+                            }
+                        }
+                        .performance-control{
+                            margin-left: 0%;
+                        }
+                    }
+                }
+            }
+            .section-4-data{
+                position: absolute;
+                right: 0;
+                width: 40%;
+                height: 100%;
+                background:$txt-white;
+                border-left: 1px solid $txt-white;
+                //三角形遮罩
+                &::after{
+                    position: absolute;
+                    z-index: 0;
+                    top: 0;
+                    right: 480px;
+                    content: '';
+                    width: 0;
+                    height: 0;
+                    border-color: transparent $txt-white;
+                    border-width: 0px 300px 680px 0px;
+                    border-style: solid;
+                }
+            }
+            .section-4-video{
+                width: 100%;
+                video{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+        .section-5-info{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            margin-top: 55px;
+            .full-annual-report{
+                h2{
+                    font-size: 40px;
+                    line-height: 62px;
+                    font-family: SourceHanSansTW;
+                    text-align: center;
+                }
+                .en-txt-sc5{
+                    font-family: Montserrat;
+                    font-size: 48px;
+                    line-height: 62px;
+                    font-weight: 900;
+                }
+            }
+            .full-annual-report-wrpper{
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+                margin-top: 34px;
+                position: relative;
+                &:after{
+                    content: '';
+                    position: absolute;
+                    align-self: center;
+                    width: 1px;
+                    height: 545px;
+                    background-color: rgb(0, 0, 0);
+                    margin-top: 34px;
+                }
+                .annual-report,.introduction{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 50%;
+                    position: relative;
+                    h3{
+                        font-size: 16px;
+                        line-height: 26px;
+                        font-weight: 600;
+                    }
+                    img{
+                        width: 100%;
+                    }
+                    .full-annual-btn{
+                        margin: 50px 0 74px 0;
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        .full-btn{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 200px;
+                            height: 58px;
+                            border-radius: 50px;
+                            margin: 0 10px;
+                            box-shadow: 0 10px 24px 0 rgba(0, 0, 0, 0.08);
+                            border: solid 1px #eaeaea;
+                            cursor: pointer;
+                            transition: .3s;
+                            &:hover{
+                                color: $txt-white;
+                                background-color: $sec5-btn-color;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -283,6 +874,9 @@ html,body{
             }
         }
     }
+}
+.sc4-container{
+    margin-top: 0;
 }
 footer{
     width: 100%;
