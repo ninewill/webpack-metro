@@ -7,7 +7,7 @@
     "watch": "NODE_ENV=development webpack --mode development --watch",
     "start": "NODE_ENV=development webpack --mode development",
     "deploy": "NODE_ENV=production webpack --mode production",
-    "dev": "NODE_ENV=production  webpack-dev-server --mode development --open --host 192.168.168.18"
+    "dev": "NODE_ENV=production  webpack-dev-server --mode development --open --host 192.168.1.14"
   },
   "author": "",
   "license": "ISC",

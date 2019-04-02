@@ -801,11 +801,10 @@ html,body{
                 &:after{
                     content: '';
                     position: absolute;
-                    align-self: center;
-                    width: 1px;
+                    align-self: flex-start;
+                    width: 0.5px;
                     height: 545px;
                     background-color: rgb(0, 0, 0);
-                    margin-top: 34px;
                 }
                 .annual-report,.introduction{
                     display: flex;
@@ -838,6 +837,11 @@ html,body{
                             border: solid 1px #eaeaea;
                             cursor: pointer;
                             transition: .3s;
+                            span{
+                                display: inline-block;
+                                vertical-align: middle;
+                                margin-right: 10px;
+                            }
                             &:hover{
                                 color: $txt-white;
                                 background-color: $sec5-btn-color;
