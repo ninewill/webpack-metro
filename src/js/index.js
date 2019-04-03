@@ -4,12 +4,6 @@ let img = 'annualreport.png';
 require('images/' + img);
 
 
-
-
-
-
-
-
 var roundLogEl = document.querySelector('.year-number');
 var roundLogEl2 = document.querySelector('.average-number');
 var roundLogEl3 = document.querySelector('.blue-number');
@@ -56,7 +50,7 @@ anime({
     targets: roundLogEl6,
     innerHTML: [0, 99.59],
     easing: 'easeInOutExpo',
-    round: 10 // Will round the animated value to 1 decimal
+    round: 5 // Will round the animated value to 1 decimal
 });
 anime({
     targets: roundLogEl7,
@@ -66,9 +60,9 @@ anime({
 });
 anime({
     targets: roundLogEl8,
-    innerHTML: [0, 17.9],
+    innerHTML: [0, 17.8],
     easing: 'easeInOutExpo',
-    round: 10 // Will round the animated value to 1 decimal
+    round: 5 // Will round the animated value to 1 decimal
 });
 anime({
     targets: roundLogEl9,
@@ -82,6 +76,35 @@ anime({
     easing: 'easeInOutExpo',
     round: 10 // Will round the animated value to 1 decimal
 });
+
+// $(window).scroll(function () {
+//     var scrollPos = $(window).scrollTop();
+//     var windowHeight = $(window).height();
+//     console.log(scrollPos, windowHeight);
+
+//     $('.scrollTop').each(function () {
+//         var target = $(this).attr('href');
+//         var targetPos = $(target).offset().top;
+//         var targetHeight = $(target).outerHeight();
+//         if (targetPos - 1 <= scrollPos && (targetPos + targetHeight) > scrollPos) {
+//             $('.scrollTop').removeClass('active')
+//             $(this).addClass('active');
+//         } else {
+//             $(this).removeClass('active')
+//         }
+//     });
+
+//     var showSkill = false;
+//     var skillTop = $('#skills').position().top;
+//     console.log('skillTop', skillTop)
+//     if (skillTop <= (scrollPos + windowHeight / 2)) {
+//         $('#skills .new-progress-bar').each(function(){
+//             var bar = $(this).data('progress');
+//         });
+//     }
+// });
+
+
 
 //年度總量
 var bar = new ProgressBar.Line(container2016, {
@@ -281,7 +304,7 @@ var bar7 = new ProgressBar.Line(mrtblueline2016, {
             fontSize: '16px',
             padding: 0,
             margin: 0,
-            transform : "rotate(90deg)",
+            transform: "rotate(90deg)",
         },
         autoStyleContainer: false
     },
@@ -310,7 +333,7 @@ var bar8 = new ProgressBar.Line(mrtbrownline2016, {
             fontSize: '16px',
             padding: 0,
             margin: 0,
-            transform : "rotate(90deg)",
+            transform: "rotate(90deg)",
         },
         autoStyleContainer: false
     },
@@ -339,7 +362,7 @@ var bar9 = new ProgressBar.Line(mrtblueline2017, {
             fontSize: '16px',
             padding: 0,
             margin: 0,
-            transform : "rotate(90deg)",
+            transform: "rotate(90deg)",
         },
         autoStyleContainer: false
     },
@@ -368,7 +391,7 @@ var bar10 = new ProgressBar.Line(mrtbrownline2017, {
             fontSize: '16px',
             padding: 0,
             margin: 0,
-            transform : "rotate(90deg)",
+            transform: "rotate(90deg)",
         },
         autoStyleContainer: false
     },
@@ -397,7 +420,7 @@ var bar11 = new ProgressBar.Line(mrtblueline20172, {
             fontSize: '16px',
             padding: 0,
             margin: 0,
-            transform : "rotate(90deg)",
+            transform: "rotate(90deg)",
         },
         autoStyleContainer: false
     },
@@ -426,7 +449,7 @@ var bar12 = new ProgressBar.Line(mrtbrownline20172, {
             fontSize: '16px',
             padding: 0,
             margin: 0,
-            transform : "rotate(90deg)",
+            transform: "rotate(90deg)",
         },
         autoStyleContainer: false
     },
@@ -457,7 +480,7 @@ var bar13 = new ProgressBar.Line(mrtblueline2016sc, {
             fontSize: '16px',
             padding: 0,
             margin: 0,
-            transform : "rotate(90deg)",
+            transform: "rotate(90deg)",
         },
         autoStyleContainer: false
     },
@@ -486,7 +509,7 @@ var bar14 = new ProgressBar.Line(mrtbrownline2016sc, {
             fontSize: '16px',
             padding: 0,
             margin: 0,
-            transform : "rotate(90deg)",
+            transform: "rotate(90deg)",
         },
         autoStyleContainer: false
     },
@@ -515,7 +538,7 @@ var bar15 = new ProgressBar.Line(mrtblueline2017sc, {
             fontSize: '16px',
             padding: 0,
             margin: 0,
-            transform : "rotate(90deg)",
+            transform: "rotate(90deg)",
         },
         autoStyleContainer: false
     },
@@ -544,7 +567,7 @@ var bar16 = new ProgressBar.Line(mrtbrownline2017sc, {
             fontSize: '16px',
             padding: 0,
             margin: 0,
-            transform : "rotate(90deg)",
+            transform: "rotate(90deg)",
         },
         autoStyleContainer: false
     },
@@ -573,7 +596,7 @@ var bar17 = new ProgressBar.Line(mrtblueline20172sc, {
             fontSize: '16px',
             padding: 0,
             margin: 0,
-            transform : "rotate(90deg)",
+            transform: "rotate(90deg)",
         },
         autoStyleContainer: false
     },
@@ -602,7 +625,7 @@ var bar18 = new ProgressBar.Line(mrtbrownline20172sc, {
             fontSize: '16px',
             padding: 0,
             margin: 0,
-            transform : "rotate(90deg)",
+            transform: "rotate(90deg)",
         },
         autoStyleContainer: false
     },
@@ -633,7 +656,7 @@ var bar19 = new ProgressBar.Line(sec3Container2016, {
             fontSize: '16px',
             padding: 0,
             margin: 0,
-            transform : null,
+            transform: null,
         },
         autoStyleContainer: false
     },
@@ -662,7 +685,7 @@ var bar20 = new ProgressBar.Line(sec3Container2017, {
             fontSize: '16px',
             padding: 0,
             margin: 0,
-            transform : null,
+            transform: null,
         },
         autoStyleContainer: false
     },
@@ -691,7 +714,7 @@ var bar21 = new ProgressBar.Line(sec3Container2018, {
             fontSize: '16px',
             padding: 0,
             margin: 0,
-            transform : null,
+            transform: null,
         },
         autoStyleContainer: false
     },
@@ -720,7 +743,7 @@ var bar22 = new ProgressBar.Line(sec3Container2016s2, {
             fontSize: '16px',
             padding: 0,
             margin: 0,
-            transform : null,
+            transform: null,
         },
         autoStyleContainer: false
     },
@@ -749,7 +772,7 @@ var bar23 = new ProgressBar.Line(sec3Container2017s2, {
             fontSize: '16px',
             padding: 0,
             margin: 0,
-            transform : null,
+            transform: null,
         },
         autoStyleContainer: false
     },
@@ -778,7 +801,7 @@ var bar24 = new ProgressBar.Line(sec3Container2018s2, {
             fontSize: '16px',
             padding: 0,
             margin: 0,
-            transform : null,
+            transform: null,
         },
         autoStyleContainer: false
     },
@@ -809,7 +832,7 @@ var bar25 = new ProgressBar.Line(sec4Container2016, {
             fontSize: '16px',
             padding: 0,
             margin: 0,
-            transform : null,
+            transform: null,
         },
         autoStyleContainer: false
     },
@@ -838,7 +861,7 @@ var bar26 = new ProgressBar.Line(sec4Container2017, {
             fontSize: '16px',
             padding: 0,
             margin: 0,
-            transform : null,
+            transform: null,
         },
         autoStyleContainer: false
     },
@@ -867,7 +890,7 @@ var bar27 = new ProgressBar.Line(sec4Container2018, {
             fontSize: '16px',
             padding: 0,
             margin: 0,
-            transform : null,
+            transform: null,
         },
         autoStyleContainer: false
     },
@@ -896,7 +919,7 @@ var bar28 = new ProgressBar.Line(sec4Container2016s2, {
             fontSize: '16px',
             padding: 0,
             margin: 0,
-            transform : null,
+            transform: null,
         },
         autoStyleContainer: false
     },
@@ -925,7 +948,7 @@ var bar29 = new ProgressBar.Line(sec4Container2017s2, {
             fontSize: '16px',
             padding: 0,
             margin: 0,
-            transform : null,
+            transform: null,
         },
         autoStyleContainer: false
     },
@@ -954,14 +977,14 @@ var bar30 = new ProgressBar.Line(sec4Container2018s2, {
             fontSize: '16px',
             padding: 0,
             margin: 0,
-            transform : null,
+            transform: null,
         },
         autoStyleContainer: false
     },
     from: { color: '#FFEA82' },
     to: { color: '#ED6A5A' },
     step: (state, bar) => {
-        bar.setText(Math.round(bar.value() *486.3));
+        bar.setText(Math.round(bar.value() * 486.3));
     }
 });
 
@@ -995,6 +1018,64 @@ bar27.animate(1.0);  // Number from 0.0 to 1.0
 bar28.animate(1.0);  // Number from 0.0 to 1.0
 bar29.animate(1.0);  // Number from 0.0 to 1.0
 bar30.animate(1.0);  // Number from 0.0 to 1.0
+
+function loop(cb) {
+    bar.animate(1, function () {
+        bar.animate(0);
+    });
+    bar2.animate(1, function () {
+        bar2.animate(0);
+    });
+    bar3.animate(1, function () {
+        bar3.animate(0);
+    });
+    bar7.animate(1, function () {
+        bar7.animate(0);
+    });
+    bar8.animate(1, function () {
+        bar8.animate(0);
+    });
+    bar9.animate(1, function () {
+        bar9.animate(0);
+    });
+    bar.animate(1, function () {
+        bar.animate(0);
+    });
+    bar2.animate(1, function () {
+        bar2.animate(0);
+    });
+    bar10.animate(1, function () {
+        bar10.animate(0);
+    });
+    bar11.animate(1, function () {
+        bar11.animate(0);
+    });
+    bar12.animate(1, function () {
+        bar12.animate(0);
+    });
+    bar19.animate(1, function () {
+        bar19.animate(0);
+    });
+    bar20.animate(1, function () {
+        bar20.animate(0);
+    });
+    bar21.animate(1, function () {
+        bar21.animate(0);
+    });
+    bar25.animate(1, function () {
+        bar25.animate(0);
+    });
+    bar26.animate(1, function () {
+        bar26.animate(0);
+    });
+    bar27.animate(1, function () {
+        bar27.animate(0);
+    });
+    
+}
+setInterval(loop, 12000);
+
+
 
 
 

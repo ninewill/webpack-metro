@@ -59,7 +59,7 @@ html,body{
         }
     }
     .wrap{
-        width: 1200px;
+        width: 1440px;
         margin: 0 auto;
         margin-top: 54px;
         .title-svg{
@@ -80,7 +80,7 @@ html,body{
 .container{
     margin-top: 23px;
     .container-wrap{
-        width: 1200px;
+        width: 1440px;
         margin: 0 auto;
         .section-2-title{
             display: flex;
@@ -113,6 +113,7 @@ html,body{
                 width: 100%;
                 position: absolute;
                 z-index: 2;
+                padding: 0 100px;
                 h3{
                     position: relative;
                     font-weight: 600;
@@ -225,7 +226,7 @@ html,body{
                     width: 0;
                     height: 0;
                     border-color: transparent $txt-white;
-                    border-width: 0px 0px 680px 300px;
+                    border-width: 0px 0px 815px 300px;
                     border-style: solid;
                 }
             }
@@ -239,6 +240,7 @@ html,body{
         }
         .section-2-info2{
             margin-top: 124px;
+            padding: 0 100px;
             h4{
                 width: 100%;
                 display: flex;
@@ -291,11 +293,14 @@ html,body{
                             .blue-number-txt{
                                 position: absolute;
                                 bottom: 0;
-                                left: 60%;
+                                left: 40%;
                                 font-size: 14px;
                                 line-height: 18px;
                                 letter-spacing: 1.4px;
                                 opacity: 0.9;
+                            }
+                            .blue-number-txt-control{
+                                left: 35%;
                             }
                         }
                         .mrt-brown-line-number{
@@ -312,11 +317,14 @@ html,body{
                             .brown-number-txt{
                                 position: absolute;
                                 bottom: 0;
-                                left: 60%;
+                                left: 45%;
                                 font-size: 14px;
                                 line-height: 18px;
                                 letter-spacing: 1.4px;
                                 opacity: 0.9;
+                            }
+                            .brown-number-txt-control{
+                                left: 27%;
                             }
                         }
                     }
@@ -590,6 +598,7 @@ html,body{
                 position: absolute;
                 z-index: 2;
                 margin-top: 27px;
+                padding: 0 100px;
                 h3{
                     position: relative;
                     font-weight: 600;
@@ -755,12 +764,12 @@ html,body{
                     position: absolute;
                     z-index: 0;
                     top: 0;
-                    right: 480px;
+                    right: 575px;
                     content: '';
                     width: 0;
                     height: 0;
                     border-color: transparent $txt-white;
-                    border-width: 0px 300px 680px 0px;
+                    border-width: 0px 300px 815px 0px;
                     border-style: solid;
                 }
             }
@@ -801,11 +810,10 @@ html,body{
                 &:after{
                     content: '';
                     position: absolute;
-                    align-self: center;
-                    width: 1px;
+                    align-self: flex-start;
+                    width: 0.5px;
                     height: 545px;
                     background-color: rgb(0, 0, 0);
-                    margin-top: 34px;
                 }
                 .annual-report,.introduction{
                     display: flex;
@@ -838,6 +846,11 @@ html,body{
                             border: solid 1px #eaeaea;
                             cursor: pointer;
                             transition: .3s;
+                            span{
+                                display: inline-block;
+                                vertical-align: middle;
+                                margin-right: 10px;
+                            }
                             &:hover{
                                 color: $txt-white;
                                 background-color: $sec5-btn-color;
@@ -883,7 +896,7 @@ footer{
     height: 192px;
     background-color: $footer-color;
     .footer-wrap{
-        width: 1200px;
+        width: 1440px;
         height: 100%;
         overflow: hidden;
         margin: 0 auto;
